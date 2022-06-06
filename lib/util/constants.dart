@@ -17,5 +17,5 @@ class Constants {
   //Responsive width limits
   static const double mobileMainPageMaxWidth = 600;
   static const double tableMainPageMaxWidth = 700;
-  static const double mobileIssueDetailPageMaxWidth = 680;
+  static const double mobileIssueDetailPageMaxWidth = 690;
 }
