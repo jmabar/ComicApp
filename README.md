@@ -18,5 +18,5 @@ To bypass this, see this [thread](https://stackoverflow.com/questions/71157863/d
 #### Security
 
 APIKey is hardcoded just for the sake of simplicity to the ones checking the App.  
-Should be placed inside asset folder as JSON file and git ignored when uploaded to repo.  
+Should be placed inside asset folder as JSON file.  
 If anyone decides to check the App, they should generate their own APIKey and modify said JSON file.
