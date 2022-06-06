@@ -1,16 +1,22 @@
-# comic_app
+# Comic Vine App
 
-A new Flutter project.
+Responsive App with display of latest issues fetched from ComicVine API, 
+Using BLoC library as State Managment and BLoC Design Architecture.
 
-## Getting Started
+## Local Web Deployment - Chrome Navigator - CORS
 
-This project is a starting point for a Flutter application.
+Fetching from Flutter's local Chrome emulator raises an XMLHTTPRequest error.
+To bypass this, see this [thread](https://stackoverflow.com/questions/71157863/dart-flutter-http-request-raises-xmlhttprequest-error).
 
-A few resources to get you started if this is your first Flutter project:
+### Future ToDos
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Unit Testing
+- Use Client and Repository as packages.
+- UI Tuning (Themes, Fonts, etc)
+- Add publisher filter functionality for last issues.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### Security
+
+APIKey is hardcoded just for the sake of simplicity to the ones checking the App.
+Should be placed inside asset folder as JSON file and git ignored when uploaded to repo.
+If anyone decides to check the App, they should generate their own APIKey and modify said JSON file.
