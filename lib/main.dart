@@ -1,10 +1,10 @@
-import 'package:comic_app/business_logic/blocs/connectivity/connectivity_bloc.dart';
-import 'package:comic_app/data/repositories/comic_vine_repository.dart';
 import 'package:flutter/material.dart';
 
+import 'package:comic_app/business_logic/blocs/connectivity/connectivity_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'business_logic/blocs/typeview/typeview_bloc.dart';
+import 'data/repositories/comic_vine_repository.dart';
 import 'presentation/pages/pages.dart';
 
 void main() {

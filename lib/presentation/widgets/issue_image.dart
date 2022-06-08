@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:cached_network_image/cached_network_image.dart';
+
 class IssueImageWidget extends StatelessWidget {
   final String imageUrl;
   final double imageContainerHeight;
@@ -11,20 +13,14 @@ class IssueImageWidget extends StatelessWidget {
     return Container(
       height: imageContainerHeight,
       width: imageContainerWidth,
-      decoration: BoxDecoration(border: Border.all(width: 2.0)),
-      child: Image.network(
-        imageUrl,
+      decoration: BoxDecoration(
+        border: Border.all(width: 2.0),
+      ),
+      child: CachedNetworkImage(
+        imageUrl: imageUrl,
         fit: BoxFit.cover,
-        frameBuilder: (BuildContext context, Widget child, int? frame, bool wasSynchronouslyLoaded) {
-          if (wasSynchronouslyLoaded) {
-            return child;
-          } else {
-            return const Icon(Icons.photo);
-          }
-        },
-        errorBuilder: (context, object, stackTrace) {
-          return const Icon(Icons.no_photography);
-        },
+        placeholder: (context, url) => const Icon(Icons.photo),
+        errorWidget: (context, url, error) => const Icon(Icons.no_photography),
       ),
     );
   }
